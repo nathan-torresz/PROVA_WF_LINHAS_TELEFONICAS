@@ -46,14 +46,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCliente.Designer.cs">
+      <DependentUpon>FormAddCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscaCliente.Designer.cs">
+      <DependentUpon>FormBuscaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Linha.cs" />
+    <Compile Include="Plano.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddCliente.resx">
+      <DependentUpon>FormAddCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscaCliente.resx">
+      <DependentUpon>FormBuscaCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

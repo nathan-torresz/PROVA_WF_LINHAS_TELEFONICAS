@@ -378,7 +378,7 @@
             this.Controls.Add(this.dgvClientes1);
             this.Name = "FormBuscaCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormBuscaCliente";
+            this.Text = "r";
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes1)).EndInit();
             this.gbOpcoesBusca.ResumeLayout(false);
             this.gbOpcoesBusca.PerformLayout();

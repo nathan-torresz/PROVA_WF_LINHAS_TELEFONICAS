@@ -13,9 +13,11 @@ namespace Prova_WF_Telefone
 {
     public partial class FormBuscaCliente : Form
     {
-        public FormBuscaCliente()
+        private Form1 form1;
+        public FormBuscaCliente(Form1 form1)
         {
             InitializeComponent();
+            this.form1 = form1;
         }
 
         private void rbBuscarNome_CheckedChanged(object sender, EventArgs e)
@@ -184,7 +186,7 @@ namespace Prova_WF_Telefone
             Atualizar();
         }
 
-        private void Atualizar()
+        public void Atualizar()
         {
             SqlDataAdapter adapt = null;
             try
@@ -221,7 +223,7 @@ namespace Prova_WF_Telefone
 
         private void btVoltar_Click(object sender, EventArgs e)
         {
-            new Form1().Show();
+            form1.Show();
             this.Hide();
         }
     }

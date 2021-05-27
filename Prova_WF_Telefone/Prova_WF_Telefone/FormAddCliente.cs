@@ -13,14 +13,16 @@ namespace Prova_WF_Telefone
 {
     public partial class FormAddCliente : Form
     {
-        public FormAddCliente()
+        private Form1 form1;
+        public FormAddCliente(Form1 form1)
         {
             InitializeComponent();
+            this.form1 = form1;
         }
 
         private void btVoltar_Click(object sender, EventArgs e)
         {
-            new Form1().Show();
+            form1.Show();
             this.Hide();
         }
 

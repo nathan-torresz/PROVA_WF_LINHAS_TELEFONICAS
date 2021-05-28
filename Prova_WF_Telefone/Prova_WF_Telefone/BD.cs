@@ -129,7 +129,7 @@ namespace Prova_WF_Telefone
         public static SqlDataAdapter RetornarLinhasCliente(int idCliente)
         {
             sql = new SqlCommand();
-            sql.CommandText = $"SELECT ID id_Cliente, id_Plano, Numero, Data_de_contratacao, Ativo FROM Linhas WHERE id_Cliente = '{idCliente}'";
+            sql.CommandText = $"SELECT Id id_Cliente, id_Plano, Numero, Data_de_contratacao, Ativo FROM Linhas WHERE id_Cliente = '{idCliente}'";
             Executar(out SqlDataAdapter adapt);
             return adapt;
         }
@@ -140,5 +140,32 @@ namespace Prova_WF_Telefone
             Executar(out SqlDataAdapter adaptador);
         }
 
+        public static void AtivarLinha(int idLinha)
+        {
+            sql = new SqlCommand();
+            sql.CommandText = $"UPDATE Linhas SET Ativo = '1' WHERE Id = '{idLinha}'";
+            Executar();
+        }
+        public static void DesativarLinha(int idLinha)
+        {
+            sql = new SqlCommand();
+            sql.CommandText = $"UPDATE Linhas SET Ativo = '0' WHERE Id = '{idLinha}'";
+            Executar();
+        }
+        public static SqlDataAdapter SelectLinhas()
+        {
+            sql = new SqlCommand();
+            sql.CommandText = "SELECT * FROM Linhas";
+            int linhasAfetadas = Executar(out SqlDataAdapter adapt);
+            return adapt;
+        }
+        public static void AlterarPlano(int id, int idPlano)
+        {
+            sql = new SqlCommand();
+            sql.CommandText = $"UPDATE Linhas SET Id_Plano = '{idPlano}' " +
+                $"WHERE Id = '{id}'";
+            Executar();
+        
+        }
     }
 }

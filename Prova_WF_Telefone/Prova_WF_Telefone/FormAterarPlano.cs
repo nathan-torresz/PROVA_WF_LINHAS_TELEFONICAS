@@ -11,31 +11,31 @@ using System.Data.SqlClient;
 
 namespace Prova_WF_Telefone
 {
-    public partial class FormIncluirLinhaTelefonica : Form
+    public partial class FormAterarPlano : Form
     {
         private Form1 form1;
-        public FormIncluirLinhaTelefonica(Form1 form1)
+        public FormAterarPlano(Form1 form1)
         {
             InitializeComponent();
             this.form1 = form1;
         }
 
-        private void btInserirLinha_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
-        private void FormIncluirLinhaTelefonica_Load(object sender, EventArgs e)
+        private void FormAterarPlano_Load(object sender, EventArgs e)
         {
-            Atualizar();
             AtualizarPlanos();
+            AtualizarLinhas();
         }
-        private void Atualizar()
+        private void AtualizarLinhas()
         {
             SqlDataAdapter adapt = null;
             try
             {
-                adapt = BD.SelectClientes();
+                adapt = BD.SelectLinhas();
             }
             catch (Exception exception)
             {
@@ -47,8 +47,8 @@ namespace Prova_WF_Telefone
                 {
                     DataTable tabela = new DataTable();
                     adapt.Fill(tabela);
-                    dgvClientes.DataSource = tabela;
-                    dgvClientes.ClearSelection();
+                    dgvLinhas.DataSource = tabela;
+                    dgvLinhas.ClearSelection();
                 }
             }
         }
@@ -76,40 +76,24 @@ namespace Prova_WF_Telefone
             }
         }
 
+        private void btAlteraPLano_Click(object sender, EventArgs e)
+        {
+            int LinhaSelecionada = dgvPlanos.SelectedCells[0].RowIndex;
+            int idPlano = (int)dgvPlanos.Rows[LinhaSelecionada].Cells[0].Value;
+           
+            int LinhaSelecionada1 = dgvLinhas.SelectedCells[0].RowIndex;
+            int idLinha = (int)dgvLinhas.Rows[LinhaSelecionada1].Cells[0].Value;
+
+            BD.AlterarPlano(idLinha, idPlano);
+
+            AtualizarLinhas();
+            AtualizarPlanos();
+        }
+
         private void btVoltar_Click(object sender, EventArgs e)
         {
             form1.Show();
             this.Hide();
-        }
-
-        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btContratarLinha_Click(object sender, EventArgs e)
-        {
-            int LinhaSelecionada = dgvPlanos.SelectedCells[0].RowIndex;
-            int idPlano = (int)dgvPlanos.Rows[LinhaSelecionada].Cells[0].Value;
-
-            int LinhaSelecionada1 = dgvClientes.SelectedCells[0].RowIndex;
-            int idCliente = (int)dgvClientes.Rows[LinhaSelecionada1].Cells[0].Value;
-
-            string numero = (string)dgvClientes.Rows[LinhaSelecionada1].Cells[3].Value;
-
-            DateTime hoje = DateTime.Now;
-
-            BD.InserirLinha(new Linha(idCliente, idPlano, numero, $"{hoje.Day}/{hoje.Month}/{hoje.Year}"));
-        }
-
-        private void btAtivar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btDesativar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

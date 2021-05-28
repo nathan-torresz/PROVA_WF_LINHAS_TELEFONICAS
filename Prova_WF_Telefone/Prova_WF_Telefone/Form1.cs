@@ -15,15 +15,15 @@ namespace Prova_WF_Telefone
     {
         private FormAddCliente formaddcliente;
         private FormBuscaCliente formbuscarcliente;
-        private FormAlterarPlano formalterarplano;
         private FormIncluirLinhaTelefonica formincluir;
+        private FormAterarPlano formalterarplano;
         public Form1()
         {
             InitializeComponent();
             formaddcliente = new FormAddCliente(this);
             formbuscarcliente = new FormBuscaCliente(this);
-            formalterarplano = new FormAlterarPlano(this);
             formincluir = new FormIncluirLinhaTelefonica(this);
+            formalterarplano = new FormAterarPlano(this);
         }
 
         private void incluirClienteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace Prova_WF_Telefone
             this.Hide();
         }
 
-        private void Atualizar()
+        public void Atualizar()
         {
             SqlDataAdapter adapt = null;
             try
@@ -90,12 +90,6 @@ namespace Prova_WF_Telefone
                 else MessageBox.Show("Erro ao buscar!");
             }
         }
-        private void modificarPlanoClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            formalterarplano.Show();
-            formalterarplano.Atualizar();
-            this.Hide();
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -105,6 +99,36 @@ namespace Prova_WF_Telefone
         private void incluirLinhaTelefônicaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             formincluir.Show();
+            this.Hide();
+        }
+
+        private void btAtivar_Click(object sender, EventArgs e)
+        {
+            int LinhaSelecionada = dgvLinhas.SelectedCells[0].RowIndex;
+            int idLinha = (int)dgvLinhas.Rows[LinhaSelecionada].Cells[0].Value;
+
+            BD.AtivarLinha(idLinha);
+            int linhaSelecionada1 = dgvClientes.SelectedCells[0].RowIndex;
+            int idcliente = (int)dgvClientes.Rows[linhaSelecionada1].Cells[0].Value;
+
+            Listar(idcliente);
+        }
+
+        private void btDesativar_Click(object sender, EventArgs e)
+        {
+            int LinhaSelecionada = dgvLinhas.SelectedCells[0].RowIndex;
+            int idLinha = (int)dgvLinhas.Rows[LinhaSelecionada].Cells[0].Value;
+
+            BD.DesativarLinha(idLinha);
+            int linhaSelecionada1 = dgvClientes.SelectedCells[0].RowIndex;
+            int idcliente = (int)dgvClientes.Rows[linhaSelecionada1].Cells[0].Value;
+
+            Listar(idcliente);
+        }
+
+        private void modificarPlanoClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formalterarplano.Show();
             this.Hide();
         }
     }

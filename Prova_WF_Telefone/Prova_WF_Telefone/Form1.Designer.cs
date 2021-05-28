@@ -39,6 +39,8 @@
             this.modificarPlanoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.dgvLinhas = new System.Windows.Forms.DataGridView();
+            this.btAtivar = new System.Windows.Forms.Button();
+            this.btDesativar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLinhas)).BeginInit();
@@ -120,7 +122,7 @@
             // dgvClientes
             // 
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(30, 95);
+            this.dgvClientes.Location = new System.Drawing.Point(29, 65);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
@@ -131,18 +133,40 @@
             // dgvLinhas
             // 
             this.dgvLinhas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLinhas.Location = new System.Drawing.Point(30, 280);
+            this.dgvLinhas.Location = new System.Drawing.Point(29, 250);
             this.dgvLinhas.Name = "dgvLinhas";
             this.dgvLinhas.RowHeadersWidth = 51;
             this.dgvLinhas.RowTemplate.Height = 24;
             this.dgvLinhas.Size = new System.Drawing.Size(733, 158);
             this.dgvLinhas.TabIndex = 2;
             // 
+            // btAtivar
+            // 
+            this.btAtivar.Location = new System.Drawing.Point(578, 414);
+            this.btAtivar.Name = "btAtivar";
+            this.btAtivar.Size = new System.Drawing.Size(89, 44);
+            this.btAtivar.TabIndex = 3;
+            this.btAtivar.Text = "Ativar";
+            this.btAtivar.UseVisualStyleBackColor = true;
+            this.btAtivar.Click += new System.EventHandler(this.btAtivar_Click);
+            // 
+            // btDesativar
+            // 
+            this.btDesativar.Location = new System.Drawing.Point(670, 414);
+            this.btDesativar.Name = "btDesativar";
+            this.btDesativar.Size = new System.Drawing.Size(92, 44);
+            this.btDesativar.TabIndex = 4;
+            this.btDesativar.Text = "Desativar";
+            this.btDesativar.UseVisualStyleBackColor = true;
+            this.btDesativar.Click += new System.EventHandler(this.btDesativar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 470);
+            this.Controls.Add(this.btDesativar);
+            this.Controls.Add(this.btAtivar);
             this.Controls.Add(this.dgvLinhas);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.menuStrip1);
@@ -173,6 +197,8 @@
         private System.Windows.Forms.ToolStripMenuItem incluirLinhaTelefônicaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pLANOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarPlanoClienteToolStripMenuItem;
+        private System.Windows.Forms.Button btAtivar;
+        private System.Windows.Forms.Button btDesativar;
     }
 }
 

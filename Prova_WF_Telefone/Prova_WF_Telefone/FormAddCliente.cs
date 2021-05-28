@@ -23,6 +23,7 @@ namespace Prova_WF_Telefone
         private void btVoltar_Click(object sender, EventArgs e)
         {
             form1.Show();
+            form1.Atualizar();
             this.Hide();
         }
 

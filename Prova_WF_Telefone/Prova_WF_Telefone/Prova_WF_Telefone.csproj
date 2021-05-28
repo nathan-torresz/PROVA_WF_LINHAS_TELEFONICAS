@@ -60,11 +60,11 @@
     <Compile Include="FormAddCliente.Designer.cs">
       <DependentUpon>FormAddCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAlterarPlano.cs">
+    <Compile Include="FormAterarPlano.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAlterarPlano.Designer.cs">
-      <DependentUpon>FormAlterarPlano.cs</DependentUpon>
+    <Compile Include="FormAterarPlano.Designer.cs">
+      <DependentUpon>FormAterarPlano.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBuscaCliente.cs">
       <SubType>Form</SubType>
@@ -88,8 +88,8 @@
     <EmbeddedResource Include="FormAddCliente.resx">
       <DependentUpon>FormAddCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAlterarPlano.resx">
-      <DependentUpon>FormAlterarPlano.cs</DependentUpon>
+    <EmbeddedResource Include="FormAterarPlano.resx">
+      <DependentUpon>FormAterarPlano.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscaCliente.resx">
       <DependentUpon>FormBuscaCliente.cs</DependentUpon>

@@ -45,7 +45,6 @@
             this.dgvPlanos.RowTemplate.Height = 24;
             this.dgvPlanos.Size = new System.Drawing.Size(776, 150);
             this.dgvPlanos.TabIndex = 0;
-            this.dgvPlanos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dgvLinhas
             // 

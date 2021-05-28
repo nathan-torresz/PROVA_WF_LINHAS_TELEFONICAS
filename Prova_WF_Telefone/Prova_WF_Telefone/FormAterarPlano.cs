@@ -20,11 +20,6 @@ namespace Prova_WF_Telefone
             this.form1 = form1;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void FormAterarPlano_Load(object sender, EventArgs e)
         {
             AtualizarPlanos();

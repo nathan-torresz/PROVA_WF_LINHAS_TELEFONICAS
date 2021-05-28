@@ -13,8 +13,6 @@ namespace Prova_WF_Telefone
         private static SqlConnection conexao = new SqlConnection();
         private static SqlCommand sql = new SqlCommand();
 
-        public const int EXECUTE_NON_QUERY = 0;
-        public const int EXECUTE_SCALAR = 1;
 
         private static SqlDataAdapter Inicializar()
         {
@@ -24,26 +22,19 @@ namespace Prova_WF_Telefone
             return adapt;
         }
 
-        public static int Executar(out SqlDataAdapter adapt, int metodo = EXECUTE_NON_QUERY)
+        public static int Executar(out SqlDataAdapter adapt)
         {
             adapt = Inicializar();
             int i = 0;
             conexao.Open();
-            if(metodo == EXECUTE_NON_QUERY)
-            {
-                i = sql.ExecuteNonQuery();
-            }
-            else if (metodo == EXECUTE_SCALAR)
-            {
-                i = Convert.ToInt32(sql.ExecuteScalar() ?? -1);
-            }
+            i = sql.ExecuteNonQuery(); 
             conexao.Close();
             return i;
         }
 
-        public static int Executar(int metodo = EXECUTE_NON_QUERY)
+        public static int Executar()
         {
-            return Executar(out SqlDataAdapter adapt, metodo);
+            return Executar(out SqlDataAdapter adapt);
         }
         public static int CadastrarCliente(Cliente c)
         {

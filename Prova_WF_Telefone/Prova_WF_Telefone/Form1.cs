@@ -108,6 +108,7 @@ namespace Prova_WF_Telefone
             int idLinha = (int)dgvLinhas.Rows[LinhaSelecionada].Cells[0].Value;
 
             BD.AtivarLinha(idLinha);
+
             int linhaSelecionada1 = dgvClientes.SelectedCells[0].RowIndex;
             int idcliente = (int)dgvClientes.Rows[linhaSelecionada1].Cells[0].Value;
 

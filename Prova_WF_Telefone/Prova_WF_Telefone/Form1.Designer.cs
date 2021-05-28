@@ -33,7 +33,6 @@
             this.incluirClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lINHATELEFÔNICAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ativarDesativarLinhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incluirLinhaTelefônicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pLANOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarPlanoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,17 +84,10 @@
             // lINHATELEFÔNICAToolStripMenuItem
             // 
             this.lINHATELEFÔNICAToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ativarDesativarLinhaToolStripMenuItem,
             this.incluirLinhaTelefônicaToolStripMenuItem});
             this.lINHATELEFÔNICAToolStripMenuItem.Name = "lINHATELEFÔNICAToolStripMenuItem";
             this.lINHATELEFÔNICAToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.lINHATELEFÔNICAToolStripMenuItem.Text = "LINHA TELEFÔNICA";
-            // 
-            // ativarDesativarLinhaToolStripMenuItem
-            // 
-            this.ativarDesativarLinhaToolStripMenuItem.Name = "ativarDesativarLinhaToolStripMenuItem";
-            this.ativarDesativarLinhaToolStripMenuItem.Size = new System.Drawing.Size(243, 26);
-            this.ativarDesativarLinhaToolStripMenuItem.Text = "Ativar/Desativar Linha";
             // 
             // incluirLinhaTelefônicaToolStripMenuItem
             // 
@@ -193,7 +185,6 @@
         private System.Windows.Forms.DataGridView dgvLinhas;
         private System.Windows.Forms.ToolStripMenuItem buscarClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lINHATELEFÔNICAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ativarDesativarLinhaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem incluirLinhaTelefônicaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pLANOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarPlanoClienteToolStripMenuItem;

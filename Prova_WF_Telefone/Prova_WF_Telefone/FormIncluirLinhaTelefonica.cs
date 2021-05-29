@@ -101,15 +101,5 @@ namespace Prova_WF_Telefone
 
             BD.InserirLinha(new Linha(idCliente, idPlano, numero, $"{hoje.Day}/{hoje.Month}/{hoje.Year}"));
         }
-
-        private void btAtivar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btDesativar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

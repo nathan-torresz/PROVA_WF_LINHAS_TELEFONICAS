@@ -120,7 +120,7 @@ namespace Prova_WF_Telefone
         public static SqlDataAdapter RetornarLinhasCliente(int idCliente)
         {
             sql = new SqlCommand();
-            sql.CommandText = $"SELECT Id id_Cliente, id_Plano, Numero, Data_de_contratacao, Ativo FROM Linhas WHERE id_Cliente = '{idCliente}'";
+            sql.CommandText = $"SELECT Id, id_Cliente, id_Plano, Numero, Data_de_contratacao, Ativo FROM Linhas WHERE id_Cliente = '{idCliente}'";
             Executar(out SqlDataAdapter adapt);
             return adapt;
         }

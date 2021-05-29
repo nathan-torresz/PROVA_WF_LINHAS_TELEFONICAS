@@ -140,9 +140,11 @@
             // 
             // btBuscar
             // 
-            this.btBuscar.Location = new System.Drawing.Point(138, 126);
+            this.btBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btBuscar.Font = new System.Drawing.Font("Bauhaus 93", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscar.Location = new System.Drawing.Point(137, 126);
             this.btBuscar.Name = "btBuscar";
-            this.btBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btBuscar.Size = new System.Drawing.Size(79, 37);
             this.btBuscar.TabIndex = 1;
             this.btBuscar.Text = "Buscar";
             this.btBuscar.UseVisualStyleBackColor = true;
@@ -282,9 +284,11 @@
             // 
             // btEditar
             // 
-            this.btEditar.Location = new System.Drawing.Point(387, 245);
+            this.btEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btEditar.Font = new System.Drawing.Font("Bauhaus 93", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEditar.Location = new System.Drawing.Point(391, 242);
             this.btEditar.Name = "btEditar";
-            this.btEditar.Size = new System.Drawing.Size(81, 32);
+            this.btEditar.Size = new System.Drawing.Size(81, 44);
             this.btEditar.TabIndex = 8;
             this.btEditar.Text = "Editar";
             this.btEditar.UseVisualStyleBackColor = true;
@@ -356,9 +360,11 @@
             // 
             // btAtualizar
             // 
+            this.btAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btAtualizar.Font = new System.Drawing.Font("Bauhaus 93", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAtualizar.Location = new System.Drawing.Point(604, 346);
             this.btAtualizar.Name = "btAtualizar";
-            this.btAtualizar.Size = new System.Drawing.Size(75, 23);
+            this.btAtualizar.Size = new System.Drawing.Size(93, 28);
             this.btAtualizar.TabIndex = 0;
             this.btAtualizar.Text = "Atualizar";
             this.btAtualizar.UseVisualStyleBackColor = true;

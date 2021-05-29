@@ -40,6 +40,8 @@
             this.dgvLinhas = new System.Windows.Forms.DataGridView();
             this.btAtivar = new System.Windows.Forms.Button();
             this.btDesativar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLinhas)).BeginInit();
@@ -54,7 +56,7 @@
             this.pLANOSToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(950, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -114,27 +116,27 @@
             // dgvClientes
             // 
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(29, 65);
+            this.dgvClientes.Location = new System.Drawing.Point(12, 92);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
-            this.dgvClientes.Size = new System.Drawing.Size(733, 159);
+            this.dgvClientes.Size = new System.Drawing.Size(920, 180);
             this.dgvClientes.TabIndex = 1;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
             // dgvLinhas
             // 
             this.dgvLinhas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLinhas.Location = new System.Drawing.Point(29, 250);
+            this.dgvLinhas.Location = new System.Drawing.Point(12, 315);
             this.dgvLinhas.Name = "dgvLinhas";
             this.dgvLinhas.RowHeadersWidth = 51;
             this.dgvLinhas.RowTemplate.Height = 24;
-            this.dgvLinhas.Size = new System.Drawing.Size(733, 158);
+            this.dgvLinhas.Size = new System.Drawing.Size(918, 183);
             this.dgvLinhas.TabIndex = 2;
             // 
             // btAtivar
             // 
-            this.btAtivar.Location = new System.Drawing.Point(578, 414);
+            this.btAtivar.Location = new System.Drawing.Point(746, 504);
             this.btAtivar.Name = "btAtivar";
             this.btAtivar.Size = new System.Drawing.Size(89, 44);
             this.btAtivar.TabIndex = 3;
@@ -144,7 +146,7 @@
             // 
             // btDesativar
             // 
-            this.btDesativar.Location = new System.Drawing.Point(670, 414);
+            this.btDesativar.Location = new System.Drawing.Point(838, 504);
             this.btDesativar.Name = "btDesativar";
             this.btDesativar.Size = new System.Drawing.Size(92, 44);
             this.btDesativar.TabIndex = 4;
@@ -152,11 +154,33 @@
             this.btDesativar.UseVisualStyleBackColor = true;
             this.btDesativar.Click += new System.EventHandler(this.btDesativar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 32);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Clientes";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bauhaus 93", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 280);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(227, 32);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Linhas do Cliente";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 470);
+            this.ClientSize = new System.Drawing.Size(950, 565);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btDesativar);
             this.Controls.Add(this.btAtivar);
             this.Controls.Add(this.dgvLinhas);
@@ -190,6 +214,8 @@
         private System.Windows.Forms.ToolStripMenuItem modificarPlanoClienteToolStripMenuItem;
         private System.Windows.Forms.Button btAtivar;
         private System.Windows.Forms.Button btDesativar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

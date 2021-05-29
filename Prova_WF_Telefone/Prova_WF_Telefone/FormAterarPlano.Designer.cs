@@ -39,28 +39,28 @@
             // dgvPlanos
             // 
             this.dgvPlanos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPlanos.Location = new System.Drawing.Point(12, 308);
+            this.dgvPlanos.Location = new System.Drawing.Point(10, 278);
             this.dgvPlanos.Name = "dgvPlanos";
             this.dgvPlanos.RowHeadersWidth = 51;
             this.dgvPlanos.RowTemplate.Height = 24;
-            this.dgvPlanos.Size = new System.Drawing.Size(776, 150);
+            this.dgvPlanos.Size = new System.Drawing.Size(920, 180);
             this.dgvPlanos.TabIndex = 0;
             // 
             // dgvLinhas
             // 
             this.dgvLinhas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLinhas.Location = new System.Drawing.Point(12, 130);
+            this.dgvLinhas.Location = new System.Drawing.Point(10, 64);
             this.dgvLinhas.Name = "dgvLinhas";
             this.dgvLinhas.RowHeadersWidth = 51;
             this.dgvLinhas.RowTemplate.Height = 24;
-            this.dgvLinhas.Size = new System.Drawing.Size(776, 150);
+            this.dgvLinhas.Size = new System.Drawing.Size(920, 180);
             this.dgvLinhas.TabIndex = 1;
             // 
             // btAlteraPLano
             // 
-            this.btAlteraPLano.Location = new System.Drawing.Point(345, 464);
+            this.btAlteraPLano.Location = new System.Drawing.Point(399, 464);
             this.btAlteraPLano.Name = "btAlteraPLano";
-            this.btAlteraPLano.Size = new System.Drawing.Size(75, 23);
+            this.btAlteraPLano.Size = new System.Drawing.Size(117, 44);
             this.btAlteraPLano.TabIndex = 2;
             this.btAlteraPLano.Text = "Alterar Plano";
             this.btAlteraPLano.UseVisualStyleBackColor = true;
@@ -68,9 +68,9 @@
             // 
             // btVoltar
             // 
-            this.btVoltar.Location = new System.Drawing.Point(12, 510);
+            this.btVoltar.Location = new System.Drawing.Point(10, 483);
             this.btVoltar.Name = "btVoltar";
-            this.btVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btVoltar.Size = new System.Drawing.Size(82, 38);
             this.btVoltar.TabIndex = 3;
             this.btVoltar.Text = "Voltar";
             this.btVoltar.UseVisualStyleBackColor = true;
@@ -80,7 +80,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 545);
+            this.ClientSize = new System.Drawing.Size(942, 533);
             this.Controls.Add(this.btVoltar);
             this.Controls.Add(this.btAlteraPLano);
             this.Controls.Add(this.dgvLinhas);

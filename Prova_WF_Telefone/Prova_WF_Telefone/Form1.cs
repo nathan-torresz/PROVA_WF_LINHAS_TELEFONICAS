@@ -113,6 +113,8 @@ namespace Prova_WF_Telefone
             int idcliente = (int)dgvClientes.Rows[linhaSelecionada1].Cells[0].Value;
 
             Listar(idcliente);
+
+            MessageBox.Show("Linha Ativada!");
         }
 
         private void btDesativar_Click(object sender, EventArgs e)
@@ -125,6 +127,8 @@ namespace Prova_WF_Telefone
             int idcliente = (int)dgvClientes.Rows[linhaSelecionada1].Cells[0].Value;
 
             Listar(idcliente);
+
+            MessageBox.Show("Linha Desativada!");
         }
 
         private void modificarPlanoClienteToolStripMenuItem_Click(object sender, EventArgs e)
